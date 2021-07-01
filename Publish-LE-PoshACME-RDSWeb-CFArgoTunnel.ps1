@@ -17,7 +17,7 @@ $Domain = "yourdomain.com"
 $SANList = @("rds.{0}","rdp.{0}", "rdh.{0}", "irelay.{0}") -f $Domain -split "\s" 
 $MachineHostName = "{0}.{1}" -f $env:COMPUTERNAME,$Domain
 
-$FriendlyName = <#"*.$Domain"#> $MachineHostName
+$FriendlyName = $MachineHostName
 
 $CertNames = @() + $FriendlyName + $Domain + $SANList
 
